@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.celio.vitor.casaportemporada">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CasaPorTemporada"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".activity.InformacoesPerfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.EditarPerfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PerfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ImovelDetalheActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MeusAnunciosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ContaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MensagensActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ViagensActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FavoritosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FiltroAnuncioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FormAnuncioEtapa1_2_2_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FormAnuncioEtapa3_3_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FormAnuncioEtapa3_2_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FormAnuncioEtapa3_1_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FormAnuncioEtapa2_4_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FormAnuncioEtapa2_3_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FormAnuncioEtapa2_2_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FormAnuncioEtapa2_1_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FormAnuncioEtapa1_4_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FormAnuncioEtapa1_3_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FormAnuncioEtapa1_2_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FormAnuncioEtapa1_1_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FormAnuncioActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.authentication.RecuperarSenhaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.authentication.CriarContaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.authentication.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

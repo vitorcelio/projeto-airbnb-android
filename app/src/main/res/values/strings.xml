@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Airbnb Clone</string>
+    <string name="politica">Ligaremos ou enviaremos uma mensagem para confirmar seu número. Podem ser aplicadas tarifas padrão de dados e mensagens. <u><b>Política de Privacidade</b></u></string>
+    <string name="recuperar_conta">Insira seu e-mail para receber um link de recuperação. Verifique o e-mail antes de enviar, certifique-se que é o e-mail da sua conta.</string>
+    <string name="underlined_dynamic_text"><u>%s</u></string>
+    <string name="botao_voltar"><u>Voltar</u></string>
+    <string name="text_input_imagens"><u>Enviar fotos a partir do seu dispositivo</u></string>
+    <string name="text_denied_message">Você negou as permissões de acesso à galeria, elas são <u>necessárias</u> para esta etapa. <b>Deseja permitir?</b></string>
+    <string name="text_input_filter">Qualquer lugar • Qualquer semana • Hóspedes?</string>
+    <string name="criar_conta_dialog">Caso não tenha uma conta, clique em "Criar conta".</string>
+    <string name="detalhes_anuncio">xh hóspedes • xq quartos • xc camas • xb banheiros • xg garagens</string>
+    <string name="info_aircover">Todas as reservas incluem proteção gratuita contra cancelamentos feitos pelo anfitrião, informações incorretas no anúncio, problemas no check-in, dentre outros.</string>
+    <string name="text_espaco_inteiro">Os hóspedes têm o lugar todo só para eles.</string>
+    <string name="text_quarto_inteiro">Os hóspedes dormem em um quarto inteiro, mas algumas áreas podem ser compartilhadas com você ou com outras pessoas.</string>
+    <string name="text_quarto_compartilhado">Os hóspedes dormem em um quarto ou em uma área comum que pode ser compartilhada com você ou com outras pessoas</string>
+    <string name="remover_filtros"><u>Remover filtros</u></string>
+    <string name="editar_perfil"><u>Editar perfil</u></string>
+    <string name="alterar_foto"><u>Alterar foto</u></string>
+    <string name="cancelar"><u>Cancelar</u></string>
+    <string name="editar"><u>Editar</u></string>
+    <string name="salvar"><u>Salvar</u></string>
+</resources>

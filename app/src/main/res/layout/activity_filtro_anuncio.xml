@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.FiltroAnuncioActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_frente_sombra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="12dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filtros"
+            android:textColor="@color/black"
+            android:textFontWeight="900"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2FAFAFAF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Faixa de preço"
+                android:textColor="@color/black"
+                android:textFontWeight="900"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_preco_medio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="O preço médio por noite é x"
+                android:textColor="@color/cor_menu_desativado"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_preco_medio">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_input2"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="preço mínimo"
+                        android:textColor="@color/cor_menu_desativado"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R$"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                    <EditText
+                        android:id="@+id/edit_preco_minimo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:layout_marginStart="4dp"
+                        android:background="@android:color/transparent"
+                        android:hint="50"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView12"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.7"
+                    android:src="@drawable/ic_menos"
+                    app:tint="@color/black" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_input2"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="preço máximo"
+                        android:textColor="@color/cor_menu_desativado"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R$"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                    <EditText
+                        android:id="@+id/edit_preco_maximo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:layout_marginStart="4dp"
+                        android:background="@android:color/transparent"
+                        android:hint="1500+"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView14"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Tipo de lugar"
+                android:textColor="@color/black"
+                android:textFontWeight="900"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout24" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Espaço inteiro"
+                    android:textColor="#3A3A3A"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Um lugar só pra você"
+                    android:textColor="@color/cor_menu_desativado"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toStartOf="@+id/cb_espaco_inteiro"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+                <CheckBox
+                    android:id="@+id/cb_espaco_inteiro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quarto privativo"
+                    android:textColor="#3A3A3A"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Seu próprio quarto em uma casa ou hotel, além de alguns espaços comuns compartilhados"
+                    android:textColor="@color/cor_menu_desativado"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toStartOf="@+id/cb_quarto_privado"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+                <CheckBox
+                    android:id="@+id/cb_quarto_privado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quarto compartilhado"
+                    android:textColor="#3A3A3A"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Um espaço para dormir e áreas comuns que podem ser compartilhadas com outras pessoas"
+                    android:textColor="@color/cor_menu_desativado"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toStartOf="@+id/cb_quarto_compartilhado"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <CheckBox
+                    android:id="@+id/cb_quarto_compartilhado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Quartos e camas"
+                android:textColor="@color/black"
+                android:textFontWeight="900"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView19">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quartos"
+                    android:textColor="@color/black"
+                    android:textFontWeight="900"
+                    android:textSize="16sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@drawable/divisor_button"
+                        android:orientation="horizontal"
+                        android:showDividers="middle">
+
+                        <android.widget.Button
+                            android:onClick="qtdQuartos"
+                            android:id="@+id/btn_quarto_qualquer_um"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_preto2"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:paddingHorizontal="20dp"
+                            android:text="Qualquer um"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdQuartos"
+                            android:id="@+id/btn_quarto_um"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="1"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdQuartos"
+                            android:id="@+id/btn_quarto_dois"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="2"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdQuartos"
+                            android:id="@+id/btn_quarto_tres"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="3"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdQuartos"
+                            android:id="@+id/btn_quarto_quatro"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="4"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdQuartos"
+                            android:id="@+id/btn_quarto_cinco"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="5"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdQuartos"
+                            android:id="@+id/btn_quarto_seis"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="6"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdQuartos"
+                            android:id="@+id/btn_quarto_sete"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="7"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdQuartos"
+                            android:id="@+id/btn_quarto_oito_mais"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="8+"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout25">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Camas"
+                    android:textColor="@color/black"
+                    android:textFontWeight="900"
+                    android:textSize="16sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@drawable/divisor_button"
+                        android:orientation="horizontal"
+                        android:showDividers="middle">
+
+                        <android.widget.Button
+                            android:onClick="qtdCamas"
+                            android:id="@+id/btn_cama_qualquer_um"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_preto2"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:paddingHorizontal="20dp"
+                            android:text="Qualquer um"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdCamas"
+                            android:id="@+id/btn_cama_um"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="1"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdCamas"
+                            android:id="@+id/btn_cama_dois"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="2"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdCamas"
+                            android:id="@+id/btn_cama_tres"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="3"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdCamas"
+                            android:id="@+id/btn_cama_quatro"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="4"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdCamas"
+                            android:id="@+id/btn_cama_cinco"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="5"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdCamas"
+                            android:id="@+id/btn_cama_seis"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="6"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdCamas"
+                            android:id="@+id/btn_cama_sete"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="7"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdCamas"
+                            android:id="@+id/btn_cama_oito_mais"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="8+"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout26">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Banheiros"
+                    android:textColor="@color/black"
+                    android:textFontWeight="900"
+                    android:textSize="16sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@drawable/divisor_button"
+                        android:orientation="horizontal"
+                        android:showDividers="middle">
+
+                        <android.widget.Button
+                            android:onClick="qtdBanheiros"
+                            android:id="@+id/btn_banheiro_qualquer_um"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_preto2"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:paddingHorizontal="20dp"
+                            android:text="Qualquer um"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdBanheiros"
+                            android:id="@+id/btn_banheiro_um"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="1"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdBanheiros"
+                            android:id="@+id/btn_banheiro_dois"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="2"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdBanheiros"
+                            android:id="@+id/btn_banheiro_tres"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="3"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdBanheiros"
+                            android:id="@+id/btn_banheiro_quatro"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="4"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdBanheiros"
+                            android:id="@+id/btn_banheiro_cinco"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="5"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdBanheiros"
+                            android:id="@+id/btn_banheiro_seis"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="6"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdBanheiros"
+                            android:id="@+id/btn_banheiro_sete"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="7"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdBanheiros"
+                            android:id="@+id/btn_banheiro_oito_mais"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="8+"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout27">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Garagens"
+                    android:textColor="@color/black"
+                    android:textFontWeight="900"
+                    android:textSize="16sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@drawable/divisor_button"
+                        android:orientation="horizontal"
+                        android:showDividers="middle">
+
+                        <android.widget.Button
+                            android:onClick="qtdGaragens"
+                            android:id="@+id/btn_garagem_qualquer_um"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_preto2"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:paddingHorizontal="20dp"
+                            android:text="Qualquer um"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdGaragens"
+                            android:id="@+id/btn_garagem_um"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="1"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdGaragens"
+                            android:id="@+id/btn_garagem_dois"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="2"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdGaragens"
+                            android:id="@+id/btn_garagem_tres"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="3"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdGaragens"
+                            android:id="@+id/btn_garagem_quatro"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="4"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdGaragens"
+                            android:id="@+id/btn_garagem_cinco"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="5"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdGaragens"
+                            android:id="@+id/btn_garagem_seis"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="6"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdGaragens"
+                            android:id="@+id/btn_garagem_sete"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="7"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+                        <android.widget.Button
+                            android:onClick="qtdGaragens"
+                            android:id="@+id/btn_garagem_oito_mais"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_branco"
+                            android:fontFamily="@font/airbnb_cereal"
+                            android:text="8+"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout23"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <include layout="@layout/menu_imovel_filtro" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

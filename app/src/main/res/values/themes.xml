@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CasaPorTemporada" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="fontFamily">@font/airbnb_cereal</item>
+        <item name="font">@font/airbnb_cereal</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/cor_principal</item>
+        <item name="colorPrimaryVariant">@color/cor_principal</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/cor_secundaria</item>
+        <item name="colorSecondaryVariant">@color/cor_secundaria</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
